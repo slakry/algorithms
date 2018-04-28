@@ -6,14 +6,15 @@ public class BinarySearchAlgorithm {
         List<Integer> numbers = new ArrayList<>();
         int elementsAmount = 10;
         int range = 15;
+        int searchedNumber = 2;
 
         numbers = generateRandomNumbersWithoutRepetitions(elementsAmount, range);
 
         Collections.sort(numbers);
-        
+
         System.out.println(Arrays.toString(numbers.toArray()));
 
-        findIndexOfElement(numbers, 6 );
+        findIndexOfElement(numbers, searchedNumber );
     }
 
     private static List<Integer> generateRandomNumbersWithoutRepetitions(int elementsAmount, int range) {
@@ -28,7 +29,7 @@ public class BinarySearchAlgorithm {
             }
         }
 
-        return (ArrayList<Integer>) numbers;
+        return numbers;
     }
 
     private static void findIndexOfElement(List<Integer> numbers, int searchedNumber) {
